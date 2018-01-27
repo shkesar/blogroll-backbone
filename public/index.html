@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Blogroll</title>
+        <!-- <script src="loadDeps.js" charset="utf-8"></script> -->
+        <script src="dist/jquery.min.js" charset="utf-8"></script>
+        <script src="dist/underscore-min.js" charset="utf-8"></script>
+        <script src="dist/backbone-min.js" charset="utf-8"></script>
+
+        <style>
+            table {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main"></div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Title</th>
+                    <th>URL</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td><input type="input" id="input-author" /></td>
+                    <td><input type="input" id="input-title" /></td>
+                    <td><input type="input" id="input-link" /></td>
+                    <td><button id="add-blog">Add</button></td>
+                </tr>
+            </thead>
+            <tbody id="blogs">
+            </tbody>
+        </table>
+
+        <script type="text/template" id="blog-template">
+            <td class="author"><%= author %></td>
+            <td class="title"><%= title %></td>
+            <td class="link"><%= link %></td>
+            <td>
+                <button class="edit-blog">Edit</button>
+                <button class="remove-blog">Remove</button>
+                <button class="update-blog" style="display: none">Update</button>
+                <button class="cancel-blog" style="display: none">Cancel</button>
+            </td>
+        </script>
+
+        <script src="index.js" charset="utf-8"></script>
+
+    </body>
+</html>
